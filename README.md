@@ -110,7 +110,7 @@ The original webpage will now return as the root page, and you will be able to n
 <h3>Customising Views</h3>
 <h4><i>Spree Deface Library</i></h4>
 
-<blockquote>"Deface is a standalone Rails library that enables you to customize Erb templates without needing to directly edit the underlying view file. Deface allows you to use standard CSS3 style selectors to target any element (including Ruby blocks), and perform an action against all the matching elements"</blockquote> <i>Spree docs...</i> docs...
+<blockquote>"Deface is a standalone Rails library that enables you to customize Erb templates without needing to directly edit the underlying view file. Deface allows you to use standard CSS3 style selectors to target any element (including Ruby blocks), and perform an action against all the matching elements"  <i>Spree docs...</i> </blockquote> 
 
 See the full documentation in the [Spree Deface Github](https://github.com/spree/deface), and the [Spree Documentation](https://guides.spreecommerce.com/developer/view.html).
 
@@ -132,7 +132,7 @@ Replacements/Insertions can accept: text; partial (relative path); template (rel
 
 
 <blockquote>
-We will endeavour to ensure that data-hook / id combination will remain consistent within any single view file (where possible), thus making your overrides more robust and upgrade proof.</blockquote> <i>Spree docs...</i>
+"We will endeavour to ensure that data-hook / id combination will remain consistent within any single view file (where possible), thus making your overrides more robust and upgrade proof."  <i>Spree docs...</i> </blockquote>
 
 
 
