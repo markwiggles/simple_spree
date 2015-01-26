@@ -1,0 +1,21 @@
+
+
+
+.container
+	.jumbotron
+		.row{style: "background:#1c5c92;padding: 20px"}
+			=image_tag 'logo.png'
+		.row
+			%h2.text-primary.text-center Barrack Obama
+			
+			%br
+			=image_tag 'usflag.png', size: '350', style: "margin-right: 100px"
+			=image_tag 'obama.png', size: '200'
+		.row
+			.pull-right
+				= link_to '<i class="fa fa-shopping-cart fa-4x"></i><h3>Shop</h3>'.html_safe, spree.buy_obama_path
+
+
+
+	    
+
