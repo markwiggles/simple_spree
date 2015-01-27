@@ -298,14 +298,15 @@ You can easily test the API locally, by constructing a url with your server addr
 ```
 http://localhost:3000/shop/api/products?token=<your token>
 ```
-
+A successful GET call should result in a json response.
 
 More information can be found in the guides under [Storefront API](https://guides.spreecommerce.com/api/summary.html).
 
 
+
 <h5>Spree with Ember</h5>
 
-A working Spree with Ember Application can be found in this Github repo by [nebulab](https://github.com/nebulab/spree-ember-example), which has a basic demo application and tutorial at [Using Ember.js with Spree](http://nebulab.it/blog/using-ember-js-with-spree).
+The Spree API allows building Client-Side MVC access and a working Spree with Ember Application can be found in this Github repo by [nebulab](https://github.com/nebulab/spree-ember-example), which has a basic demo application and tutorial at the Nebulab website - Using Ember.js with Spree](http://nebulab.it/blog/using-ember-js-with-spree).
 
 
 
