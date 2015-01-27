@@ -85,8 +85,8 @@ Spree also uses the <i>font-awesome</i> gem which can be helpful in your markup.
 ```
 
 <h3>Create New Product</h3>
-Navigate to the backend using <i>/admin</i> and you be asked to login (use the email you specified in the install eg. spree@example.com, and password).  You will see the admin area where you can navigate to Products, then +New Product, where you can add a product name, price, image etc.  You may also wish to look at taxonomies, where you can add a category and/or a brand, which can be assocated with the product when creating or editing a product.
-[alt text](https://github.com/markwiggles/simple_spree/raw/master/app/assets/images/taxons.png "taxons")
+Navigate to the backend using <i>/admin</i> and you be asked to login (use the email you specified in the install eg. spree@example.com, and password).  You will see the admin area where you can navigate to Products, then +New Product, where you can add a product name, price, image etc.  You may also wish to look at Taxonomies, where you can add a category and/or a brand, which can be assocated with the product when creating or editing a product.<br>
+![alt text](https://github.com/markwiggles/simple_spree/raw/master/app/assets/images/taxons.png "taxons")
 
 
 
