@@ -5,7 +5,7 @@ $icon-font-path: "../../bootstrap/";
 
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  background: #1c5c92 asset-url('spree_header.jpg') center center;
+  background: #33922B asset-url('spree_header.jpg') center center;
   background-size: cover;
   margin-bottom: $line-height-computed;
   #header {
@@ -54,5 +54,5 @@ h1 {
 }
 
 .list-group {
-    max-width: 250px;
+  max-width: 250px;
 }

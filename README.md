@@ -293,6 +293,13 @@ More information can be found in the guides under [Logic Customization](https://
 <h5>Spree API</h5>
 The Spree installation comes bundled with the Spree API which can be used to access the resources of the Spree app.  A key can be generated through the Spree admin backend. Access is at user level, with the same level of permissions.
 
+You can easily test the API locally, by constructing a url with your server address, api path, plus your token which can also be named as api_key. 
+
+```
+http://localhost:3000/shop/api/products?token=<your token>
+```
+
+
 More information can be found in the guides under [Storefront API](https://guides.spreecommerce.com/api/summary.html).
 
 
