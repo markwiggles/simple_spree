@@ -1,6 +1,9 @@
 # Simple Spree Store
 <h2>Example of adding Spree to an existing Rails app</h2>
 
+<i>Note: if you wish to clone this project, it will ask you to run rake to create the db, which give you a working Spree site with no products. If you want the sample data, then re-install Spree. The routing to the product page won't work until there is a product with id: 17, so you may need to update this.  The files in the overrides directory will also be commented out, so you can play with them to get an idea of how the code affects the view/s.</i>
+
+
 <h4>Contents</h4>
 
 [Required Gems](#required-gems)
@@ -89,7 +92,7 @@ Navigate to the backend using <i>/admin</i> and you be asked to login (use the e
 
 <h3>Adding Routes</h3>
 In `routes.rb`
-* mount Spree< at `/shop`.
+* mount Spree at `/shop` (or whatever)
 * Add a route which will navigate direct to the product that you want to sell. For this you will need to get the integer id for newly created product (here it is 17), from your database products table.  You can either specify this as the root, or create a path using the id, perhaps adding more paths later for new products.
 
 ```ruby
