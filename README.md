@@ -1,4 +1,4 @@
-# Example Spree Store
+# Simple Spree Store
 <h2>Example of adding Spree to an existing Rails app</h2>
 
 <h4>Contents</h4>
@@ -36,14 +36,14 @@
 
 <h3>Required Gems</h3>
 
-Add the <i>Spree</i> stable build, the <i>bootstrap</i> gem for the frontend, as well as the <i>Devise</i> authentication gem.
+Add the Spree stable build, the <i>bootstrap</i> gem for the frontend, as well as the Devise authentication gem.
 
 ```ruby
 gem 'spree', github: 'spree/spree', branch: '2-4-stable'
 gem 'spree_bootstrap_frontend', github: '200Creative/spree_bootstrap_frontend'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 ```
-If you are adding <i>Spree</i>, where you already use <i>Devise</i>, then leave out the <i>spree_auth_devise</i> gem, and follow the [Spree Custom Authentication Developer Guide](https://guides.spreecommerce.com/developer/authentication.html) to continue with your pre-existing user model. 
+If you are adding Spree, where you already use Devise, then leave out the <i>spree_auth_devise</i> gem, and follow the [Spree Custom Authentication Developer Guide](https://guides.spreecommerce.com/developer/authentication.html) to continue with your pre-existing user model. 
 
 Optionally, if you need volume pricing breaks, add the following gem.
 ```ruby
@@ -58,15 +58,15 @@ Then run bundle install.
 
 <h3>Install Spree</h3>
 
-Unless you have used <i>Spree</i> before, it is a good idea to load your first project with the sample data as it will give you the opportunity to explore the setup including configuration, taxons, freight etc. If you don't want the sample data,  pass the additional arguments  <i> --sample --seed </i>.  See the Spree Github for more info.
+Unless you have used Spree before, it is a good idea to load your first project with the sample data as it will give you the opportunity to explore the setup including configuration, taxons, freight etc. If you don't want the sample data,  pass the additional arguments  <i> --sample --seed </i>.  See the Spree Github for more info.
 
 ```
 rails g spree:install
 ```
 <h5>Problems Installing</h5>
-If you get a message re the installation of <i>Nokogiri</i> (HTML parser) gem, then it may be as simple as updating your Xcode tools, installing the <i>Nokogiri</i> gem first, or else this link may help - [Installing Nokogiri](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
+If you get a message re the installation of <i>Nokogiri</i> (HTML parser) gem, then it may be as simple as updating your Xcode tools, installing the Nokogiri gem first, or else this link may help - [Installing Nokogiri](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
 
-Reload your webpage and you should now see the <i>Spree</i> frontend site with products. We will fix the routing later, to get your original page back. The <i>Spree</i> page will be a bit ugly, but nothing some <i>bootstrap</i> css can't fix!
+Reload your webpage and you should now see the Spree frontend site with products. We will fix the routing later, to get your original page back. The Spree page will be a bit ugly, but nothing some <i>bootstrap</i> css can't fix!
 
 
 <h3>Install Bootstrap Frontend</h3>
@@ -89,7 +89,7 @@ Navigate to the backend using <i>/admin</i> and you be asked to login (use the e
 
 <h3>Adding Routes</h3>
 In `routes.rb`
-* mount <i>Spree</i> at `/shop`.
+* mount Spree< at `/shop`.
 * Add a route which will navigate direct to the product that you want to sell. For this you will need to get the integer id for newly created product (here it is 17), from your database products table.  You can either specify this as the root, or create a path using the id, perhaps adding more paths later for new products.
 
 ```ruby
@@ -103,22 +103,23 @@ end
 ```
 You may like to run `rake:routes` to check that your routes are there.
 
-The original webpage will now return as the root page, and you will be able to navigate to the <i>Spree</i> site using  `/shop` or in your code as `spree.buy_obama_path` (note the namespace call), or `spree_path` for the the root path.
+The original webpage will now return as the root page, and you will be able to navigate to the Spree site using  `/shop` or in your code as `spree.buy_obama_path` (note the namespace call), or `spree_path` for the the root path.
 
 
 
 <h3>Customising Views</h3>
-<h4><i>Spree Deface Library</i></h4>
 
-<blockquote>"Deface is a standalone Rails library that enables you to customize Erb templates without needing to directly edit the underlying view file. Deface allows you to use standard CSS3 style selectors to target any element (including Ruby blocks), and perform an action against all the matching elements"  <i>Spree docs...</i> </blockquote> 
+<h4>Spree Deface Library</h4>
 
-See the full documentation in the [Spree Deface Github](https://github.com/spree/deface), and the [Spree Documentation](https://guides.spreecommerce.com/developer/view.html).
+<blockquote>"Deface is a standalone Rails library that enables you to customize Erb templates without needing to directly edit the underlying view file. Deface allows you to use standard CSS3 style selectors to target any element (including Ruby blocks), and perform an action against all the matching elements"  <i>...Spree docs</i> </blockquote> 
+
+See the full documentation in the [Spree Deface Github](https://github.com/spree/deface), and the [Spree Developer Guide](https://guides.spreecommerce.com/developer/view.html).
 
 
 
 <h5>Deface Overrides</h5>
 
-Using <i>Deface</i>, we will change parts of the view, namely:
+Using Deface<, we will change parts of the view, namely:
 
 1. Remove Search Bar
 2. Change Logo
@@ -132,7 +133,7 @@ Replacements/Insertions can accept: text; partial (relative path); template (rel
 
 
 <blockquote>
-"We will endeavour to ensure that data-hook / id combination will remain consistent within any single view file (where possible), thus making your overrides more robust and upgrade proof."  <i>Spree docs...</i> </blockquote>
+"We will endeavour to ensure that data-hook / id combination will remain consistent within any single view file (where possible), thus making your overrides more robust and upgrade proof."  <i>...Spree docs</i> </blockquote>
 
 
 
@@ -263,6 +264,26 @@ include Spree::Core::ControllerHelpers
 
 <h5>Decorators</h5>
 
+Internal Spee code can be extended and overriden by creating files in relevant app/models/spree or app/controllers/spree directory with a .decorator extension.
+
+For example in `orders_controller_decorator.rb` in the controllers directory, we can write code to add a method to display in a Shoppping Cart view.  The method makes use on a controller helper (current_order) to lookup the item count. 
+
+
+```ruby
+Spree::OrdersController.class_eval do
+
+  include Spree::Core::ControllerHelpers
+ 
+  def add_message
+
+   current_order.item_count < 2 ? "10% discount for orders of 2 or more" : "Checkout now for fast delivery"
+  
+  end
+
+  helper_method :add_message
+end
+```
+More information can be found in the guides under [Logic Customization](https://guides.spreecommerce.com/developer/logic.html)
 
 <br>
 
@@ -270,10 +291,14 @@ include Spree::Core::ControllerHelpers
 
 
 <h5>Spree API</h5>
+The Spree installation comes bundled with the Spree API which can be used to access the resources of the Spree app.  A key can be generated through the Spree admin backend. Access is at user level, with the same level of permissions.
 
+More information can be found in the guides under [Storefront API](https://guides.spreecommerce.com/api/summary.html).
 
 
 <h5>Spree with Ember</h5>
+
+A working Spree with Ember Application can be found in this Github repo by [nebulab](https://github.com/nebulab/spree-ember-example), which has a basic demo application and tutorial at [Using Ember.js with Spree](http://nebulab.it/blog/using-ember-js-with-spree).
 
 
 
