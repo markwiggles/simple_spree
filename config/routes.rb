@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   Spree::Core::Engine.routes.draw do
-    get :obama, to: 'products#show', as: :buy_obama, :id => 17
-    root to: 'products#show', as: 'buy_product', :id => 17
+    get :obama, to: 'products#show', as: :buy_obama, id: 17
+    # root to: 'products#show', as: :buy_product, id: 17
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

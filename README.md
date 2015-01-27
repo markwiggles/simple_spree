@@ -119,7 +119,7 @@ See the full documentation in the [Spree Deface Github](https://github.com/spree
 
 <h5>Deface Overrides</h5>
 
-Using Deface<, we will change parts of the view, namely:
+Using Deface, we will change parts of the view, namely:
 
 1. Remove Search Bar
 2. Change Logo
